@@ -43,8 +43,8 @@
 
 ## Реализация
 
-![task](https://github.com/helmetica/users-photo-albums/raw/master/screens/screen1.png)
+![screen 1](https://github.com/helmetica/users-photo-albums/raw/master/screens/screen1.PNG)
 
-![task](https://github.com/helmetica/users-photo-albums/raw/master/screens/screen2.png)
+![screen 2](https://github.com/helmetica/users-photo-albums/raw/master/screens/screen2.png)
 
-![task](https://github.com/helmetica/users-photo-albums/raw/master/screens/screen3.png)
+![screen 3](https://github.com/helmetica/users-photo-albums/raw/master/screens/screen3.png)
