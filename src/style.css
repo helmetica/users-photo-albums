@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.page {
+    height: 100%;
+    overflow: hidden;
+}
+
+#catalogTab, #favoritesTab {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#viewer {
+    display: none;
+    position: absolute;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    z-index: 2;
+}
+#overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+/* Навигация */
+.nav {
+    display: flex;
+    height: 44px;
+    padding: 12px 24px;
+    background-color: black;
+}
+.nav-item {
+    padding: 12px 20px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+.nav-item::after {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    opacity: 0;
+
+    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.nav-item:hover::after {
+    height: 3px;
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.list {
+    list-style-type: none;
+    padding-inline-start: 16px;
+}
+.list-favorite {
+    display: flex;
+}
+.item {
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.item-favorite {
+    margin-right: 12px;
+}
+.item-photo {
+    display: flex;
+}
+.item-content {
+    display: flex;
+    padding: 4px 2px;
+}
+.item-content:hover {
+    background-color: aliceblue;
+}
+
+
+/* Иконки */
+.icon {
+    font-family: 'icomoon' !important;
+}
+
+.icon-arrow::after {
+    content: url(./icons/arrow.svg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    right: 6px;
+}
+.icon-collapse::after {
+    transform: rotate(90deg);
+}
+
+.icon-favorites {
+    opacity: 0.4;
+}
+.icon-favorites:hover, .icon-favorites.active {
+    opacity: 1;
+    color: #f1cd0d;
+}
+.icon-favorites::after {
+    content: "\e9d9";
+    font-size: 24px;
+    position: relative;
+    right: 8px;
+}
